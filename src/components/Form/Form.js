@@ -3,7 +3,6 @@ import UserDetails from './UserDetails'
 import BillingInfo from './BillingInfo'
 import ShippingInfo from './ShippingInfo'
 import Confirm from './Confirm'
-import Success from './Success'
 
 export class Form extends Component {
     state = {
@@ -13,7 +12,7 @@ export class Form extends Component {
         email: '',
         phoneNumber: null,
         cardholder: '',
-        longNumber: null,
+        creditNumber: null,
         expiration: null,
         cvc: null,
         street: '',
@@ -46,7 +45,7 @@ export class Form extends Component {
             email, 
             phoneNumber, 
             cardholder,
-            longNumber,
+            creditNumber,
             expiration,
             cvc,
             street,
@@ -60,7 +59,7 @@ export class Form extends Component {
             email, 
             phoneNumber, 
             cardholder,
-            longNumber,
+            creditNumber,
             expiration,
             cvc,
             street,
@@ -102,10 +101,6 @@ export class Form extends Component {
                         nextStep={this.nextStep}
                         values={values}
                     />
-                )
-            case 5:
-                return (
-                    <Success />
                 )
             default: 
                 break

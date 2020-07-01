@@ -106,6 +106,7 @@ export class ShippingInfo extends Component {
                         <input
                             required
                             type="number"
+                            maxLength="5"
                             name="zip"
                             onChange={handleChange('zip')}
                             defaultValue={values.zip}
@@ -114,7 +115,10 @@ export class ShippingInfo extends Component {
                 </div>
                 <div className="flex-two-col">
                     <button onClick={this.previous}>Prev</button>
-                    <button onClick={this.continue}>Next</button>
+                    <button 
+                        disabled={!(values.street, values.city, values.state, values.zip)}
+                        onClick={this.continue}
+                    >Next</button>
                 </div>
             </section>
         )

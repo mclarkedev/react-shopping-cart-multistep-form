@@ -18,7 +18,6 @@ export class Confirm extends Component {
                 <p><strong>Name:</strong> {values.firstName} {values.lastName}</p>
                 <p><strong>Email:</strong> {values.email}</p>
                 <p><strong>Phone Number:</strong> {values.phoneNumber}</p>
-                <p><strong>Using Card:</strong> {values.longNumber}</p>
                 <p><strong>Shipping to:</strong>
                     <br/>
                     {values.street}
@@ -29,7 +28,7 @@ export class Confirm extends Component {
                 </p>
                 <div className="flex-two-col">
                     <button onClick={this.previous}>Prev</button>
-                    <button onClick={this.continue}>Confirm &amp; Continue</button>
+                    <a href="/success" className="button">Confirm &amp; Continue</a>
                 </div>
         </div>
         )

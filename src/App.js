@@ -1,26 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header';
-import Form from './components/Form/Form';
-import ProgressBar from './components/ProgressBar';
-import RightRail from './components/RightRail';
-
+import Checkout from './components/Checkout'
+import Success from './components/Success'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
         <Header />
-          <div className="two-column-grid">    
-            <main>
-              <ProgressBar />
-              <form>
-                <Form />          
-              </form>
-            </main>
-            <RightRail />
-        </div>
-    </div>
-  );
+        <Switch>
+          <Route path="/" component={Checkout} exact/>
+          <Route path="/success" component={Success} />
+        </Switch>
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;

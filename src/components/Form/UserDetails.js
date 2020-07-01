@@ -36,6 +36,7 @@ export class UserDetails extends Component {
                     </label>
                     <input
                         required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                         type="email"
                         name="email"
                         onChange={handleChange('email')}
@@ -47,13 +48,15 @@ export class UserDetails extends Component {
                 <input
                     required
                     type="tel"
-                    max="11"
+                    minLength="10"
+                    maxLength="14"
                     placeholder="1-123-456-7890"
                     name="phoneNumber"
                     onChange={handleChange('phoneNumber')}
                     defaultValue={values.phoneNumber}
                 />
-                <button onClick={this.continue}>Next</button>
+                <button disabled={!(values.firstName, values.lastName, values.email, values.phoneNumber)}                    
+                    onClick={this.continue}>Next</button>
             </section>
         )
     }

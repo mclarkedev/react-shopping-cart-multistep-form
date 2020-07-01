@@ -25,15 +25,15 @@ export class BillingInfo extends Component {
                     onChange={handleChange('cardholder')}
                     defaultValue={values.cardholder}
                 />
-               <label htmlFor='cardNumber'>
+               <label htmlFor='creditNumber'>
                     Card number
                 </label>
                 <input
                     required
                     type="number"
-                    name="cardNumber"
-                    onChange={handleChange('longNumber')}
-                    defaultValue={values.longNumber}
+                    name="creditNumber"
+                    onChange={handleChange('creditNumber')}
+                    defaultValue={values.creditNumber}
                 />
 
 
@@ -44,7 +44,9 @@ export class BillingInfo extends Component {
                         </label>
                         <input
                         id="expiration"
-                        placeholder='MM/YY'
+                        placeholder='MMYY'
+                        minLength="4"
+                        maxLength="4"
                         type="number"
                         required
                         name="expiration"
@@ -59,6 +61,8 @@ export class BillingInfo extends Component {
                         <input
                             id="cvc"
                             required
+                            minLength="3"
+                            maxLength="3"
                             type="number"
                             name="cvc"
                             onChange={handleChange('cvc')}
@@ -69,8 +73,11 @@ export class BillingInfo extends Component {
 
                 
                 <div className="flex-two-col">
-                    <button onClick={this.previous}>Prev</button>
-                    <button onClick={this.continue}>Next</button>
+                    <button onClick={this.previous}>Back</button>
+                    <button 
+                        disabled={!(values.cardholder, values.creditNumber, values.expiration, values.cvc)}
+                        onClick={this.continue}
+                    >Next</button>
                 </div>
             </section>
         )

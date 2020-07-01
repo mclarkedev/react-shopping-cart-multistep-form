@@ -1,3 +1,14 @@
+## Day 2 Feature Ideas
+- Componentize the input fields
+  - Wire up better validation
+- Add a form step / progress bar 
+  - Utilize Context API to pull state from Form, or change where state lives
+- Add animations to the checkout form
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
