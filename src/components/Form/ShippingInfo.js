@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class ShippingInfo extends Component {
     continue = (e) => {
@@ -25,7 +25,7 @@ export class ShippingInfo extends Component {
                     onChange={handleChange('street')}
                     defaultValue={values.street}
                 />
-               <label htmlFor='city'>
+                <label htmlFor='city'>
                     City
                 </label>
                 <input
@@ -118,10 +118,13 @@ export class ShippingInfo extends Component {
                     <button 
                         disabled={!(values.street, values.city, values.state, values.zip)}
                         onClick={this.continue}
-                    >Next</button>
+                    >
+                        Next
+                    </button>
                 </div>
             </section>
         )
     }
 }
+
 export default ShippingInfo;

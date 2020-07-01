@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class UserDetails extends Component {
     continue = (e) => {
@@ -33,15 +33,15 @@ export class UserDetails extends Component {
                 />
                 <label htmlFor='email'>
                     Email Address
-                    </label>
-                    <input
-                        required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        type="email"
-                        name="email"
-                        onChange={handleChange('email')}
-                        defaultValue={values.email}
-                    />
+                </label>
+                <input
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    type="email"
+                    name="email"
+                    onChange={handleChange('email')}
+                    defaultValue={values.email}
+                />
                 <label htmlFor='phoneNumber'>
                     Phone Number
                 </label>
@@ -55,10 +55,15 @@ export class UserDetails extends Component {
                     onChange={handleChange('phoneNumber')}
                     defaultValue={values.phoneNumber}
                 />
-                <button disabled={!(values.firstName, values.lastName, values.email, values.phoneNumber)}                    
-                    onClick={this.continue}>Next</button>
+                <button 
+                    disabled={!(values.firstName, values.lastName, values.email, values.phoneNumber)}                    
+                    onClick={this.continue}
+                >
+                    Next
+                </button>
             </section>
         )
     }
 }
+
 export default UserDetails;

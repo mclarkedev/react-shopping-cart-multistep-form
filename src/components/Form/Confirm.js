@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class Confirm extends Component {
     continue = (e) => {
@@ -33,7 +33,6 @@ export class Confirm extends Component {
         </div>
         )
     }
-
 }
 
 export default Confirm

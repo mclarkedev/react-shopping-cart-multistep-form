@@ -1,6 +1,6 @@
-import React from 'react'
-import teeImg from '../img/tee.jpeg'
-import hoodieImg from '../img/hoodie.jpeg'
+import React from 'react';
+import teeImg from '../img/tee.jpeg';
+import hoodieImg from '../img/hoodie.jpeg';
 
 const RightRail = () => {
     return (
@@ -46,5 +46,4 @@ const RightRail = () => {
     )
 }
 
-export default RightRail
-
+export default RightRail;

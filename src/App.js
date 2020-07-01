@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header';
 import Checkout from './components/Checkout'
 import Success from './components/Success'
-import './App.css';
-
+import './index.css';
 
 class App extends Component {
   render() {
@@ -12,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" component={Checkout} exact/>
+          <Route path="/" component={Checkout} exact />
           <Route path="/success" component={Success} />
         </Switch>
       </BrowserRouter>

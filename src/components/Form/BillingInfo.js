@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class BillingInfo extends Component {
     continue = (e) => {
@@ -25,7 +25,7 @@ export class BillingInfo extends Component {
                     onChange={handleChange('cardholder')}
                     defaultValue={values.cardholder}
                 />
-               <label htmlFor='creditNumber'>
+                <label htmlFor='creditNumber'>
                     Card number
                 </label>
                 <input
@@ -35,8 +35,6 @@ export class BillingInfo extends Component {
                     onChange={handleChange('creditNumber')}
                     defaultValue={values.creditNumber}
                 />
-
-
                 <div className="flex-two-col billing">
                     <div>
                         <label htmlFor='expiration'>
@@ -70,17 +68,18 @@ export class BillingInfo extends Component {
                         />
                     </div>
                 </div>
-
-                
                 <div className="flex-two-col">
                     <button onClick={this.previous}>Back</button>
                     <button 
                         disabled={!(values.cardholder, values.creditNumber, values.expiration, values.cvc)}
                         onClick={this.continue}
-                    >Next</button>
+                    >
+                        Next
+                    </button>
                 </div>
             </section>
         )
     }
 }
+
 export default BillingInfo;

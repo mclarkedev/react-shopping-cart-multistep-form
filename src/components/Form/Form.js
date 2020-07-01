@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import UserDetails from './UserDetails'
-import BillingInfo from './BillingInfo'
-import ShippingInfo from './ShippingInfo'
-import Confirm from './Confirm'
+import React, { Component } from 'react';
+import UserDetails from './UserDetails';
+import BillingInfo from './BillingInfo';
+import ShippingInfo from './ShippingInfo';
+import Confirm from './Confirm';
 
 export class Form extends Component {
     state = {
@@ -52,7 +52,7 @@ export class Form extends Component {
             city,
             state,
             zip
- } = this.state;
+    } = this.state;
         const values = {
             firstName, 
             lastName, 

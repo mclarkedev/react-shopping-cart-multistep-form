@@ -1,7 +1,7 @@
-import React from 'react'
-import Hamburger from '../img/menu.svg'
-import Search from '../img/search.svg'
-import Cart from '../img/cart.svg'
+import React from 'react';
+import Hamburger from '../img/menu.svg';
+import Search from '../img/search.svg';
+import Cart from '../img/cart.svg';
 
 const Header = () => {
     return (
@@ -21,8 +21,12 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="nav-icons">
-                <div aria-label="Click to open search"><img src={Search} alt="Search" /></div>
-                <div aria-label="Click to go to cart"><img src={Cart} alt="Shopping cart" /></div>
+                <div aria-label="Click to open search">
+                    <img src={Search} alt="Search" />
+                </div>
+                <div aria-label="Click to go to cart">
+                    <img src={Cart} alt="Shopping cart" />
+                </div>
             </div>
         </header>
     )
