@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../../styles/elements/button';
 
 export class UserDetails extends Component {
     continue = (e) => {
@@ -55,12 +56,12 @@ export class UserDetails extends Component {
                     onChange={handleChange('phoneNumber')}
                     defaultValue={values.phoneNumber}
                 />
-                <button 
+                <Button 
                     disabled={!(values.firstName, values.lastName, values.email, values.phoneNumber)}                    
                     onClick={this.continue}
                 >
                     Next
-                </button>
+                </Button>
             </section>
         )
     }

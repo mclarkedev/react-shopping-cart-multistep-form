@@ -2,22 +2,23 @@ import React from 'react';
 import Hamburger from '../img/menu.svg';
 import Search from '../img/search.svg';
 import Cart from '../img/cart.svg';
+import Header from '../styles/elements/header';
 
-const Header = () => {
+const HeaderBar = () => {
     return (
-        <header>
+        <Header>
             <div className="brand">
                 <div className="hamburger" aria-label="Open mobile navigation menu">
                     <img src={Hamburger} alt="" />
                 </div>
                 <p>MyStore</p>
             </div>
-            <nav className="nav-links">
+            <nav>
                 <ul>
-                <li>Women</li>
-                <li>Men</li>
-                <li>Kids</li>
-                <li>Sale</li>
+                    <li>Women</li>
+                    <li>Men</li>
+                    <li>Kids</li>
+                    <li>Sale</li>
                 </ul>
             </nav>
             <div className="nav-icons">
@@ -28,8 +29,8 @@ const Header = () => {
                     <img src={Cart} alt="Shopping cart" />
                 </div>
             </div>
-        </header>
+        </Header>
     )
 }
 
-export default Header;
+export default HeaderBar;

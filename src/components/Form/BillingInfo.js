@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '../../styles/elements/button';
+import TwoCol from '../../styles/elements/twocol';
 
 export class BillingInfo extends Component {
     continue = (e) => {
@@ -35,7 +37,7 @@ export class BillingInfo extends Component {
                     onChange={handleChange('creditNumber')}
                     defaultValue={values.creditNumber}
                 />
-                <div className="flex-two-col billing">
+                <TwoCol className="billing">
                     <div>
                         <label htmlFor='expiration'>
                             Expiration
@@ -67,16 +69,16 @@ export class BillingInfo extends Component {
                             defaultValue={values.cvc}
                         />
                     </div>
-                </div>
-                <div className="flex-two-col">
-                    <button onClick={this.previous}>Back</button>
-                    <button 
+                </TwoCol>
+                <TwoCol>
+                    <Button onClick={this.previous}>Back</Button>
+                    <Button 
                         disabled={!(values.cardholder, values.creditNumber, values.expiration, values.cvc)}
                         onClick={this.continue}
                     >
                         Next
-                    </button>
-                </div>
+                    </Button>
+                </TwoCol>
             </section>
         )
     }

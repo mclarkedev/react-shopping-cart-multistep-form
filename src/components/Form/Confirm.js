@@ -1,4 +1,20 @@
 import React, { Component } from 'react';
+import theme from '../../styles/settings';
+import Button from '../../styles/elements/button';
+import TwoCol from '../../styles/elements/twocol';
+import styled from 'styled-components';
+
+const LinkButton = styled.a`
+    font-size: 1em;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    background-color: ${theme.primary};
+    border: none;
+    border-radius: 5px;
+    color: ${theme.white};
+    cursor: pointer;
+    display: block;
+`
 
 export class Confirm extends Component {
     continue = (e) => {
@@ -13,7 +29,7 @@ export class Confirm extends Component {
     render () {
         const {values} = this.props;
         return (
-            <div>
+            <section>
                 <h2>Confirm Order</h2>
                 <p><strong>Name:</strong> {values.firstName} {values.lastName}</p>
                 <p><strong>Email:</strong> {values.email}</p>
@@ -26,11 +42,11 @@ export class Confirm extends Component {
                     <br />
                     {values.zip}
                 </p>
-                <div className="flex-two-col">
-                    <button onClick={this.previous}>Prev</button>
-                    <a href="/success" className="button">Confirm &amp; Continue</a>
-                </div>
-        </div>
+                <TwoCol>
+                    <Button onClick={this.previous}>Prev</Button>
+                    <LinkButton href="/success" className="button">Confirm &amp; Continue</LinkButton>
+                </TwoCol>
+        </section>
         )
     }
 }
