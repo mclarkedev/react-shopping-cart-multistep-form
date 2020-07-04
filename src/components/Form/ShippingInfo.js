@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '../../styles/elements/button';
+import TwoCol from '../../styles/elements/twocol';
 
 export class ShippingInfo extends Component {
     continue = (e) => {
@@ -35,7 +37,7 @@ export class ShippingInfo extends Component {
                     onChange={handleChange('city')}
                     defaultValue={values.city}
                 />
-                <div className="flex-two-col shipping">
+                <TwoCol className="shipping">
                     <div>
                         <label htmlFor='state'>
                             State
@@ -112,16 +114,16 @@ export class ShippingInfo extends Component {
                             defaultValue={values.zip}
                         />
                     </div>
-                </div>
-                <div className="flex-two-col">
-                    <button onClick={this.previous}>Prev</button>
-                    <button 
+                </TwoCol>
+                <TwoCol>
+                    <Button onClick={this.previous}>Prev</Button>
+                    <Button 
                         disabled={!(values.street, values.city, values.state, values.zip)}
                         onClick={this.continue}
                     >
                         Next
-                    </button>
-                </div>
+                    </Button>
+                </TwoCol>
             </section>
         )
     }

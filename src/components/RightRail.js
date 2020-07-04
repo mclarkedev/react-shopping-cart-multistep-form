@@ -1,10 +1,12 @@
 import React from 'react';
 import teeImg from '../img/tee.jpeg';
 import hoodieImg from '../img/hoodie.jpeg';
+import RightAsideRail from '../styles/elements/rightrail';
+import Button from '../styles/elements/button';
 
 const RightRail = () => {
     return (
-        <aside>
+        <RightAsideRail>
             <section className="order-summary">
             <h2>Order Summary</h2>
             <div className="cart-item">
@@ -25,7 +27,7 @@ const RightRail = () => {
             <section>
                 <p>Gift Card/Discount Code</p>
                 <div className="gift-card">
-                    <input /><button>Apply</button>
+                    <input /><Button>Apply</Button>
                 </div>
             </section>
             <section className="order-totals">
@@ -42,7 +44,7 @@ const RightRail = () => {
                     <p><strong>$78.53</strong></p>
                 </div>
             </section>
-        </aside>
+        </RightAsideRail>
     )
 }
 

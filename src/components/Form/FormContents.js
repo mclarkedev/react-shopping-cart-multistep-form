@@ -4,7 +4,7 @@ import BillingInfo from './BillingInfo';
 import ShippingInfo from './ShippingInfo';
 import Confirm from './Confirm';
 
-export class Form extends Component {
+export class FormContents extends Component {
     state = {
         step: 1,
         firstName: '',
@@ -108,4 +108,4 @@ export class Form extends Component {
     }
 }
 
-export default Form;
+export default FormContents;

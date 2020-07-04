@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from './Form/Form';
+import FormContents from './Form/FormContents';
+import Form from '../styles/elements/formelements'
 import RightRail from './RightRail';
 
 function Checkout() {
@@ -7,9 +8,9 @@ function Checkout() {
         <div className="App">
             <div className="two-column-grid">    
                 <main>
-                <form>
-                    <Form />          
-                </form>
+                <Form>
+                    <FormContents />          
+                </Form>
                 </main>
                 <RightRail />
             </div>
