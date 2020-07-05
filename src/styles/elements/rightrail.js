@@ -37,6 +37,7 @@ const RightAsideRail = styled.aside`
     .cart-item {
         display: flex;
         margin-bottom: 2rem;
+        align-items: flex-start;
     }
 
     .cart-item > img {
