@@ -4,6 +4,7 @@
 - Add a form step / progress bar 
   - Utilize Context API to pull state from Form, or change where state lives
 - Add animations to the checkout form
+- Create end-to-end test with Cypress or Puppeteer (or some other E2E / automated test framework)
 
 
 
