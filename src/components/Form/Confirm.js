@@ -4,6 +4,8 @@ import Button from '../../styles/elements/button';
 import TwoCol from '../../styles/elements/twocol';
 import styled from 'styled-components';
 
+import Fade from 'react-reveal/Fade';
+
 const LinkButton = styled.a`
     font-size: 1em;
     margin: 1rem 0;
@@ -29,24 +31,26 @@ export class Confirm extends Component {
     render () {
         const {values} = this.props;
         return (
-            <section>
-                <h2>Confirm Order</h2>
-                <p><strong>Name:</strong> {values.firstName} {values.lastName}</p>
-                <p><strong>Email:</strong> {values.email}</p>
-                <p><strong>Phone Number:</strong> {values.phoneNumber}</p>
-                <p><strong>Shipping to:</strong>
-                    <br/>
-                    {values.street}
-                    <br />
-                    {values.city}, {values.state}
-                    <br />
-                    {values.zip}
-                </p>
-                <TwoCol>
-                    <Button onClick={this.previous}>Prev</Button>
-                    <LinkButton href="/success" className="button">Confirm &amp; Continue</LinkButton>
-                </TwoCol>
-        </section>
+            <Fade>
+                <section>
+                    <h2>Confirm Order</h2>
+                    <p><strong>Name:</strong> {values.firstName} {values.lastName}</p>
+                    <p><strong>Email:</strong> {values.email}</p>
+                    <p><strong>Phone Number:</strong> {values.phoneNumber}</p>
+                    <p><strong>Shipping to:</strong>
+                        <br/>
+                        {values.street}
+                        <br />
+                        {values.city}, {values.state}
+                        <br />
+                        {values.zip}
+                    </p>
+                    <TwoCol>
+                        <Button onClick={this.previous}>Prev</Button>
+                        <LinkButton href="/success" className="button">Confirm &amp; Continue</LinkButton>
+                    </TwoCol>
+                </section>
+            </Fade>
         )
     }
 }

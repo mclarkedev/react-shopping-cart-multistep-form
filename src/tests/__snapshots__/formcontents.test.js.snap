@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Pages Billing Info matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Form Pages Confirm matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Form Pages Shipping Info matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Form Pages User Details matches snapshot 1`] = `ShallowWrapper {}`;
